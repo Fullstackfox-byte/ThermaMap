@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userStore = require('server/src/db/userStore');
-const { signToken, requireAuth, requireRole } = require('server/src/middleware/auth');
+const userStore = require('../db/userStore');
+const { signToken, requireAuth, requireRole } = require('../middleware/auth');
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const ADMIN_SECRET = process.env.ADMIN_SECRET || 'uhi-admin-secret-2026';

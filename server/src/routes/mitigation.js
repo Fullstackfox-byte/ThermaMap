@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
-const { requireAuth, requireRole } = require('server/src/middleware/auth');
+const dataStore = require('../db/dataStore');
+const { requireAuth, requireRole } = require('../middleware/auth');
 
 const VALID_INTERVENTIONS = [
   'COOL_ROOFS',

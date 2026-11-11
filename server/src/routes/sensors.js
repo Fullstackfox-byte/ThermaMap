@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
+const dataStore = require('../db/dataStore');
 
 // GET /api/sensors - List all IoT sensor stations
 router.get('/', (req, res) => {

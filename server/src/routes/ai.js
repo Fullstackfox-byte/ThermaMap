@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const zoneMetrics = require('server/src/services/zoneMetrics');
-const ml = require('server/src/services/mlService');
-const { recommendAll, recommendForZone } = require('server/src/services/recommendationEngine');
+const zoneMetrics = require('../services/zoneMetrics');
+const ml = require('../services/mlService');
+const { recommendAll, recommendForZone } = require('../services/recommendationEngine');
 
 function stripPrivate(trained) {
   const { _model, _rows, ...safe } = trained;

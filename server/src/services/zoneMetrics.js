@@ -1,5 +1,5 @@
-const dataStore = require('server/src/db/dataStore');
-const UHIEngine = require('server/src/services/uhiEngine');
+const dataStore = require('../db/dataStore');
+const UHIEngine = require('./uhiEngine');
 
 function meanSurfaceTemp(zones) {
   if (!zones.length) return 0;

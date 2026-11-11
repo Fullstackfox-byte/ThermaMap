@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
-const UHIEngine = require('server/src/services/uhiEngine');
+const dataStore = require('../db/dataStore');
+const UHIEngine = require('../services/uhiEngine');
 
 // POST /api/simulation/evaluate - Evaluate mitigation scenario
 router.post('/evaluate', (req, res) => {

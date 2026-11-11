@@ -1,8 +1,8 @@
 const express = require('express');
 const rateLimit = require('express-rate-limit');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
-const zoneMetrics = require('server/src/services/zoneMetrics');
+const dataStore = require('../db/dataStore');
+const zoneMetrics = require('../services/zoneMetrics');
 
 const MODEL = 'gemini-3.5-flash-lite';
 

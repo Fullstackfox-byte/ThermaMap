@@ -4,7 +4,7 @@
  * recommendation is explainable. Expected cooling is computed with UHIEngine's
  * empirical coefficients and is labelled as a MODEL ESTIMATE, never as a measurement.
  */
-const UHIEngine = require('server/src/services/uhiEngine');
+const UHIEngine = require('./uhiEngine');
 
 function priorityFromZone(zone) {
   const score = zone.hviScore;

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
-const { getEnrichedZones } = require('server/src/services/zoneMetrics');
+const dataStore = require('../db/dataStore');
+const { getEnrichedZones } = require('../services/zoneMetrics');
 
 // GET /api/analytics/diurnal - 24-Hour Diurnal Temperature Profile
 router.get('/diurnal', (req, res) => {

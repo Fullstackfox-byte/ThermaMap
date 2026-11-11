@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const userStore = require('server/src/db/userStore');
+const userStore = require('../db/userStore');
 
 let SECRET = process.env.JWT_SECRET;
 if (!SECRET) {

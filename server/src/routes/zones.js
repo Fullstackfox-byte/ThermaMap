@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const dataStore = require('server/src/db/dataStore');
-const { getEnrichedZones, enrichZone, meanSurfaceTemp } = require('server/src/services/zoneMetrics');
+const dataStore = require('../db/dataStore');
+const { getEnrichedZones, enrichZone, meanSurfaceTemp } = require('../services/zoneMetrics');
 
 // GET /api/zones - Get all microclimate zones with calculated metrics
 router.get('/', (req, res) => {

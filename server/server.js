@@ -4,16 +4,16 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 require('dotenv').config();
 
-const dataStore = require('server/src/db/dataStore');
-const zonesRouter = require('server/src/routes/zones');
-const sensorsRouter = require('server/src/routes/sensors');
-const mitigationRouter = require('server/src/routes/mitigation');
-const simulationRouter = require('server/src/routes/simulation');
-const alertsRouter = require('server/src/routes/alerts');
-const analyticsRouter = require('server/src/routes/analytics');
-const authRouter = require('server/src/routes/auth');
-const aiRouter = require('server/src/routes/ai');
-const chatRouter = require('server/src/routes/chat');
+const dataStore = require('./src/db/dataStore');
+const zonesRouter = require('./src/routes/zones');
+const sensorsRouter = require('./src/routes/sensors');
+const mitigationRouter = require('./src/routes/mitigation');
+const simulationRouter = require('./src/routes/simulation');
+const alertsRouter = require('./src/routes/alerts');
+const analyticsRouter = require('./src/routes/analytics');
+const authRouter = require('./src/routes/auth');
+const aiRouter = require('./src/routes/ai');
+const chatRouter = require('./src/routes/chat');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
