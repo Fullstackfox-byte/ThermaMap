@@ -1,0 +1,225 @@
+/* ==========================================================================
+   METEO INTELLIGENCE / AURA UHI - MASTER CYBERPUNK CLIMATE DASHBOARD STYLES
+   ========================================================================== */
+
+:root {
+  --bg-deep: #030712;
+  --panel-bg: rgba(7, 14, 34, 0.75);
+  --panel-border: rgba(56, 189, 248, 0.15);
+  --panel-border-hover: rgba(56, 189, 248, 0.35);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --cyan-accent: #38bdf8;
+  --emerald-accent: #34d399;
+  --amber-accent: #fbbf24;
+  --rose-accent: #f43f5e;
+}
+
+body {
+  background-color: var(--bg-deep);
+  background-image: 
+    radial-gradient(ellipse at 15% 10%, rgba(30, 58, 138, 0.25) 0%, transparent 45%),
+    radial-gradient(ellipse at 85% 20%, rgba(13, 148, 136, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 90%, rgba(88, 28, 135, 0.2) 0%, transparent 55%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Panel Container */
+.meteo-glass {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.meteo-glass:hover {
+  border-color: var(--panel-border-hover);
+}
+
+.meteo-glass-card {
+  background: rgba(12, 22, 52, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+}
+
+/* Circular SVG Gauge */
+.meteo-gauge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.meteo-gauge-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.meteo-gauge-sub {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* 7-Day Heat Range Bar */
+.meteo-temp-bar-bg {
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(30, 41, 59, 0.8);
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+}
+
+.meteo-temp-bar-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #38bdf8 0%, #34d399 35%, #fbbf24 70%, #f43f5e 100%);
+  box-shadow: 0 0 10px rgba(244, 63, 94, 0.5);
+}
+
+/* Neon Glow utilities */
+.glow-cyan {
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.65);
+}
+
+.glow-emerald {
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.65);
+}
+
+.glow-rose {
+  text-shadow: 0 0 12px rgba(244, 63, 94, 0.65);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.2);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.4);
+}
+
+/* Active Nav item */
+.nav-pill-active {
+  background: rgba(56, 189, 248, 0.12) !important;
+  color: #38bdf8 !important;
+  border-left: 3px solid #38bdf8;
+}
+
+/* Legend Gradients */
+.legend-gradient-heat {
+  background: linear-gradient(90deg, #38bdf8 0%, #34d399 25%, #fbbf24 50%, #f97316 75%, #ef4444 100%);
+}
+
+.legend-gradient-rain {
+  background: linear-gradient(90deg, #0ea5e9 0%, #06b6d4 25%, #10b981 50%, #facc15 75%, #ef4444 100%);
+}
+
+.legend-gradient-wind {
+  background: linear-gradient(90deg, #0284c7 0%, #38bdf8 30%, #34d399 70%, #a855f7 100%);
+}
+
+/* Doppler Radar Pulse Animation */
+@keyframes radarSweep {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.radar-sweep-beam {
+  animation: radarSweep 4s linear infinite;
+  transform-origin: center;
+}
+
+.radar-pulse-ring {
+  animation: radarPulse 3s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+/* VayuDrishti Brand & Cards (Image 2 Mockup Styles) */
+.vayu-card-red {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(239, 68, 68, 0.38);
+  border-radius: 14px;
+}
+
+.vayu-card-green {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.38);
+  border-radius: 14px;
+}
+
+.vayu-card-purple {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.18) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.38);
+  border-radius: 14px;
+}
+
+.vayu-card-cyan {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.18) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.38);
+  border-radius: 14px;
+}
+
+.vayu-active-nav {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.08) 100%) !important;
+  color: #34d399 !important;
+  border-left: 3px solid #10b981 !important;
+}
+
+/* UHI Equalizer Rainbow Bars */
+.uhi-bar {
+  width: 5px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 3px;
+  transition: height 0.3s ease;
+}
+
+/* Leaflet dark tile custom contrast */
+.uhi-tiles-dark {
+  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(90%) saturate(60%) !important;
+}

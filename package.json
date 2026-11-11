@@ -1,0 +1,26 @@
+{
+  "name": "smart-urban-heat-island-platform",
+  "version": "1.0.0",
+  "description": "Smart Urban Heat Island Mitigation & Microclimate Mapping Platform (MERN Stack)",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm start --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "install:all": "npm install --prefix server && npm install --prefix client"
+  },
+  "keywords": [
+    "uhi",
+    "microclimate",
+    "gis",
+    "mitigation",
+    "mern-stack",
+    "smart-city"
+  ],
+  "author": "Smart UHI Research Group",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
