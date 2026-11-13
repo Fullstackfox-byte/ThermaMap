@@ -1,9 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=230&section=header&text=AuraUHI&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Smart%20Urban%20Heat%20Island%20Mitigation%20%26%20Microclimate%20Mapping&descSize=20&descAlignY=60" alt="AuraUHI banner" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=240&section=header&text=ThermaMap&fontSize=80&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=Smart%20Urban%20Heat%20Island%20Mitigation%20and%20Microclimate%20Mapping&descSize=20&descAlignY=60" alt="ThermaMap banner" width="100%"/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=F97316&center=true&vCenter=true&width=760&lines=Geospatial+Digital+Twin+for+Cooler+Cities;Real-time+IoT+Microclimate+Monitoring;Physics-Informed+What-If+Mitigation+Simulator;Satellite+LST+%2B+NDVI+%2B+Albedo+%2B+HVI+Layers" alt="Typing animation" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=F97316&center=true&vCenter=true&width=760&lines=Geospatial+Digital+Twin+for+Cooler+Cities;Real-time+IoT+Microclimate+Monitoring;Physics-Informed+What-If+Mitigation+Simulator;Satellite+LST%2C+NDVI%2C+Albedo+and+HVI+Layers" alt="Typing animation" />
 </a>
 
 <br/>
@@ -19,16 +19,16 @@
 ![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
 ![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen?style=flat-square)
 ![npm](https://img.shields.io/badge/npm-%3E%3D9-red?style=flat-square)
-![Type](https://img.shields.io/badge/type-Capstone%20%26%20Research-blueviolet?style=flat-square)
+![Type](https://img.shields.io/badge/type-Capstone%20and%20Research-blueviolet?style=flat-square)
 
 **An intelligent geospatial digital-twin platform for real-time microclimate monitoring, thermal anomaly detection, and physics-informed urban heat mitigation modeling.**
 
 [✨ Features](#-features) •
 [🏗 Architecture](#-system-architecture) •
-[📐 Science](#-scientific--mathematical-formulations) •
+[📐 Science](#-scientific-and-mathematical-formulations) •
 [🚀 Quick Start](#-quick-start) •
 [📡 API](#-restful-api) •
-[🎓 Viva Q&A](#-viva--defense-qa)
+[🎓 Viva Q and A](#-viva--defense-qa)
 
 </div>
 
@@ -38,7 +38,7 @@
 
 Cities run hotter than their surroundings. Dense asphalt and concrete, low-albedo materials, anthropogenic heat release and sparse vegetation trap heat, creating the **Urban Heat Island (UHI)** effect.
 
-**AuraUHI** connects three worlds that rarely talk to each other:
+**ThermaMap** connects three worlds that rarely talk to each other:
 
 <div align="center">
 
@@ -97,12 +97,12 @@ Automated thermal stress alerts and citizen safety advisories triggered by real-
 
 ```mermaid
 flowchart TD
-    subgraph IoT_GIS["🛰 Spatial & Environmental Data Sources"]
+    subgraph IoT_GIS["🛰 Spatial and Environmental Data Sources"]
         S1["IoT Micro-Weather Stations<br/>(Air Temp, Humidity, Wind, Radiation)"]
-        S2["Satellite Thermal Infrared<br/>(LST & NDVI Layers)"]
+        S2["Satellite Thermal Infrared<br/>(LST and NDVI Layers)"]
     end
 
-    subgraph Backend_Engine["⚙ Express & Node.js Microclimate Engine (Port 5000)"]
+    subgraph Backend_Engine["⚙ Express and Node.js Microclimate Engine (Port 5000)"]
         API["REST API Router<br/>/api/zones · /api/simulation · /api/analytics"]
         ENGINE["UHIEngine<br/>(Oke's Formulations, UTFVI, HVI, Energy Balance)"]
         TICKER["Live IoT Telemetry<br/>Background Pulse Generator"]
@@ -114,16 +114,16 @@ flowchart TD
     end
 
     subgraph Frontend["🖥 React 19 + Tailwind + Leaflet (Port 5173)"]
-        NAV["Navbar & Live Telemetry Monitor"]
-        MAP["Leaflet Heatmap & Layer Switcher"]
+        NAV["Navbar and Live Telemetry Monitor"]
+        MAP["Leaflet Heatmap and Layer Switcher"]
         SIM["Digital Twin What-If Simulator"]
-        CHART["Diurnal & Vulnerability Analytics (Recharts)"]
-        KANBAN["Municipal Projects & Voting"]
+        CHART["Diurnal and Vulnerability Analytics (Recharts)"]
+        KANBAN["Municipal Projects and Voting"]
         MODAL["Executive Audit Report (PDF / Print)"]
     end
 
     S1 -->|Telemetry Stream| API
-    S2 -->|GIS Polygons & Attributes| DATASTORE
+    S2 -->|GIS Polygons and Attributes| DATASTORE
     API <--> ENGINE
     API <--> DATASTORE
     DATASTORE <--> MONGO
@@ -142,7 +142,7 @@ flowchart TD
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider"/>
 
-## 📐 Scientific & Mathematical Formulations
+## 📐 Scientific and Mathematical Formulations
 
 <details open>
 <summary><b>1️⃣ Urban Heat Island Intensity</b></summary>
@@ -193,7 +193,7 @@ $$\Delta T_{net} = \Delta T_{albedo} + \Delta T_{canopy} + \Delta T_{pavement} +
 | 🖥 **Frontend** | React 19, Vite, Tailwind CSS, Leaflet, React-Leaflet, Recharts, Lucide-React |
 | ⚙ **Backend** | Node.js, Express.js, CORS, Dotenv, UHIEngine service, Gemini AI integration |
 | 🗄 **Database** | Embedded high-performance DataStore, with optional MongoDB / Mongoose |
-| 🌍 **GIS & Styling** | OpenStreetMap (calibrated inverted dark theme), Esri World Imagery, NASA MODIS LST layer, GeoJSON |
+| 🌍 **GIS and Styling** | OpenStreetMap (calibrated inverted dark theme), Esri World Imagery, NASA MODIS LST layer, GeoJSON |
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider"/>
 
@@ -276,7 +276,7 @@ curl -X POST http://localhost:5000/api/simulation/evaluate \
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider"/>
 
-## 🎓 Viva / Defense Q&A
+## 🎓 Viva / Defense Q and A
 
 <details>
 <summary><b>Q1. What is nocturnal thermal lag in urban microclimates?</b></summary>
